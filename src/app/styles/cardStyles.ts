@@ -1,0 +1,71 @@
+// Card styles that need to be applied directly
+export const cardStyles = {
+  container: {
+    width: '100%',
+    maxWidth: '1200px',
+    margin: '0 auto',
+    display: 'flex',
+    flexDirection: 'column' as const,
+    alignItems: 'center',
+    position: 'relative' as const,
+  },
+  cardScene: {
+    width: '100%',
+    maxWidth: '400px',
+    height: '500px',
+    margin: '40px auto',
+    perspective: '2000px',
+    position: 'relative' as const,
+  },
+  card: {
+    width: '100%',
+    height: '100%',
+    position: 'relative' as const,
+    transformStyle: 'preserve-3d' as const,
+    transition: 'transform 1s cubic-bezier(0.15, 1, 0.35, 1)',
+    borderRadius: '16px',
+    cursor: 'pointer',
+    boxShadow: '0 25px 50px -12px rgba(0, 0, 0, 0.3)',
+    willChange: 'transform',
+  },
+  cardFront: {
+    background: 'linear-gradient(135deg, #845EC2, #2C73D2, #0081CF)',
+    padding: '30px',
+    display: 'flex',
+    flexDirection: 'column' as const,
+    justifyContent: 'space-between',
+    boxShadow: '0 20px 40px rgba(0, 0, 0, 0.3)',
+    backfaceVisibility: 'hidden' as const,
+  },
+  cardBack: {
+    transform: 'rotateY(180deg)',
+    background: '#1E293B',
+    padding: '25px',
+    display: 'flex',
+    flexDirection: 'column' as const,
+    boxShadow: '0 20px 40px rgba(0, 0, 0, 0.3)',
+    overflow: 'auto',
+    color: 'white',
+    backfaceVisibility: 'hidden' as const,
+  },
+  holographicFoil: {
+    position: 'absolute' as const,
+    top: 0,
+    left: 0,
+    width: '100%',
+    height: '100%',
+    background: 'linear-gradient(125deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.05) 20%, rgba(255,255,255,0.1) 40%, rgba(255,255,255,0.05) 60%, rgba(255,255,255,0) 80%)',
+    opacity: 0.3,
+    transition: 'all 0.5s ease',
+    transform: 'translateZ(1px)',
+    pointerEvents: 'none' as const,
+    zIndex: 10,
+  },
+};
+
+// Animations object
+export const animations = {
+  pulse: 'pulse 3s infinite alternate',
+  dataStream: 'dataStream 10s linear infinite',
+  blink: 'blink 2s infinite',
+};
