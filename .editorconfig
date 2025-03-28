@@ -1,0 +1,22 @@
+# EditorConfig is awesome: https://EditorConfig.org
+
+root = true
+
+# Default settings for all files
+[*]
+indent_style = space
+indent_size = 2
+charset = utf-8
+end_of_line = lf
+insert_final_newline = true
+trim_trailing_whitespace = true
+
+# Settings for JavaScript/JSX files (React)
+[*.{js,jsx}]
+indent_style = space
+indent_size = 2
+
+# Settings for TypeScript/TSX files (React with TypeScript)
+[*.{ts,tsx}]
+indent_style = space
+indent_size = 2
