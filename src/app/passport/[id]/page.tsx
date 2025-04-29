@@ -4,15 +4,16 @@ import { Card } from '../../components';
 import { ParticleBackground } from '../../components/Effects';
 
 interface PassportPageProps {
-  params: {
+  params: Promise<{
     id: string;
-  };
+  }>;
 }
 
-const PassportPage = async ({ params }: PassportPageProps) => {
+const PassportPage = (props: PassportPageProps) => {
+  const { id } = React.use(props.params);
   // This could be loaded from an API in the future
   const cardData = {
-    serialNumber: params.id,
+    serialNumber: id,
     metrics: [
       { value: 150, label: 'CO₂ Saved (tonnes)' },
       { value: 20, label: 'Deforestation Prevented (km²)' }
